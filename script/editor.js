@@ -2,7 +2,8 @@ $(function() {
 
   // メニューの移動
   function moveMenu(target) {
-    const blkTop = target.position().top;
+    const blkTop = target.offset().top - $(".field").offset().top;
+    console.log(blkTop);
     // 中央揃え用オフセット
     const offsetMenu = $(".menu-wrapper").height() / 2;
     const offsetBlk = target.height() / 2;
@@ -40,7 +41,7 @@ $(function() {
     // storageから要素引き出し
     const elem = $(this).find(".storage");
     // 分類の色をクラスで適用
-    const colclass = elem.parents(".block").attr("class").split(" ")[2];
+    const colclass = elem.parents(".block").attr("class").split(" ")[3];
     // リセット用削除するclass一覧
     const classes = "kind-track kind-time kind-type kind-station kind-form kind-fixed";
     $(".menu-content").empty().append(elem.html()).removeClass(classes).addClass(colclass);
@@ -111,11 +112,18 @@ $(function() {
   });
 
   // inputに単位付与
+  let tmpWaitTime = 0;
   $(document).on("input", ".waittime-input", function() {
-    let value = $(this).val()*1+0;  // NaN防止
-    $(this).parents(".block").attr("wait", value);
-    $(this).parents(".waittime").find(".waittime-label").find("span").html(value+"ミリ秒");;
+    tmpWaitTime = $(this).val()*1+0;  // NaN防止
+    $(this).parents(".block").attr("wait", tmpWaitTime);
   });
+  $(document).on("focus", ".waittime-input", function() {
+    $(this).val($(this).val().replace(/[^0-9]/g, ''));
+  });
+  $(document).on("change", ".waittime-input", function() {
+    $(this).val(tmpWaitTime+" ms");
+  });
+
 
   // パネルにフォーカス
   $(".add-btn").on("click", function() {
@@ -130,6 +138,7 @@ $(function() {
     // block-treeを初期化
     if (emptyTree) {
       $(".tree-inner").empty();
+      $(".tree-inner").append('<div class="prediction"></div>');
     }
     // key/queue取得
     const preKey = $(this).attr("key");

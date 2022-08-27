@@ -17,6 +17,7 @@
     <script src="https://kit.fontawesome.com/cfd1cae778.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="script/draggable.js" charset="utf-8"></script>
     <script src="script/json_loader.js" charset="utf-8"></script>
     <script src="script/data_manager.js" charset="utf-8"></script>
     <script src="script/editor.js" charset="utf-8"></script>
@@ -40,11 +41,7 @@
         <div class="link-outer">
           <a href="#">パーツ一覧</a>
         </div>
-      </div>
-      <div class="account">
-        <div class="account-icon">
-          <img src="img/user_icon.jpg" alt="">
-        </div>
+        <div class="" style="margin-left: 4rem; opacity: .5;">※ヘッダーはダミーです</div>
       </div>
     </header>
     <div class="wrapper">
@@ -84,7 +81,9 @@
       </div>
       <div class="field">
         <div class="block-tree">
-          <div class="tree-inner"></div>
+          <div class="tree-inner nd-parent">
+            <div class="prediction"></div>
+          </div>
           <div class="add-btn">
             <div class="plus-icon">＋</div>
           </div>
@@ -113,6 +112,9 @@
           <div class="btn-outer forward-btn" skip="1">
             <i class="shown fa-solid fa-forward"></i>
           </div>
+        </div>
+        <div class="panel downloadFile">
+          <a href="#" class="downloadMp3">現在のMP3ファイルをダウンロード</a>
         </div>
       </div>
     <div>

@@ -1,7 +1,7 @@
 {
   "template":{
     "status":false,
-    "main":"<div class='block subject'><div class='icon-outer'><div class='icon'><i class='fa-solid fa-!i'></i></div></div><div class='content'>$</div><div class='remove-btn'><i class='fa-solid fa-xmark'></i></div><div class='waittime'><label class='waittime-label'><span></span><input type='text' class='waittime-input' value='_INTERVAL_'></label></div></div>",
+    "main":"<div class='block subject nd-child'><div class='icon-outer'><div class='icon'><i class='fa-solid fa-!i'></i></div></div><div class='content'>$</div><div class='remove-btn'><i class='fa-solid fa-xmark'></i></div><div class='waittime'><input type='text' class='waittime-input' value='_INTERVAL_ ms'></div></div>",
     "cont_text":"<span class='text' wait='_WAIT_'>$</span>",
     "cont_input":"<span class='select _ID_' wait='_WAIT_' prefix='_PRE_' suffix='_SUF_' absorb='_ABS_' beforeAbs='_BFABS_' sepNums=_SEP_>$</span>",
     "menu":"<div class='storage'>$</div>",
@@ -220,24 +220,6 @@
     "input":{},
     "kind":"fixed",
     "wait":420
-  },
-
-  "201":{
-    "status":true,
-    "words":"約_!m_遅れて",
-    "input":{
-      "m":{
-        "value":[5, 10, 30, 60],
-        "prefix":"",
-        "suffix":"分",
-        "absorb":"遅れて",
-        "beforeAbs":"約",
-        "ident":"ltm",
-        "sepNums":false
-      }
-    },
-    "kind":"time",
-    "wait":100
   },
 
   "501":{

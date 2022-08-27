@@ -633,6 +633,7 @@ header {
 		.block-tree {
 			display: flex;
 			flex-direction: column;
+			user-select: none;
 			align-items: center;
 			width: calc(22rem + 2rem);
 			height: calc(100% - 1rem);
@@ -652,8 +653,37 @@ header {
 				}
 			}
 			
+			.nd-dragging {
+				opacity: .5;
+				
+				* {
+					opacity: 0;
+				}
+			}
+			
+			.tree-inner {
+				position: relative;
+				
+				.prediction {
+					position: absolute;
+					display: block;
+					width: 100%;
+					height: .2rem;
+					border-radius: .1rem;
+					background: #007aff;
+				}
+			}
+			
 			.block {
 				animation: .5s ease 0s 1 bounceIn forwards;
+				
+				.content {
+					cursor: move;
+					
+					.select {
+						cursor: pointer;
+					}
+				}
 				
 				&.playing {
 					transform: scale(1.1);

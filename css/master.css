@@ -20,6 +20,7 @@ html, body {
   margin: 0;
   padding: 0;
   background: #fafafa;
+  /*font-size: 14px;*/
 }
 
 img {
@@ -38,7 +39,7 @@ header {
   margin-top: 1rem;
   border-radius: .5rem;
   background: white;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 8px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0rem .15rem .6rem;
   color: #444;
 }
 header > * {
@@ -76,20 +77,6 @@ header .links .link-outer a {
 header .links .link-outer:hover {
   background: #f8f8f8;
 }
-header .account {
-  min-width: 6rem;
-}
-header .account .account-icon {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  border: 1px solid #ccc;
-  overflow: hidden;
-}
-header .account .account-icon img {
-  max-width: 100%;
-  cursor: pointer;
-}
 
 .wrapper {
   display: flex;
@@ -116,6 +103,7 @@ header .account .account-icon img {
   border: 1px solid #ccc;
   outline: none;
   background: white;
+  font-size: 1rem;
   font-family: a-otf-ud-shin-go-pr6n, FontAwesome, sans-serif;
 }
 .wrapper .search-outer .search:focus {
@@ -142,7 +130,7 @@ header .account .account-icon img {
   margin-bottom: 2rem;
   border-radius: .8rem;
   background: white;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 8px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0rem .15rem .6rem;
 }
 .wrapper .block .waittime {
   position: absolute;
@@ -158,44 +146,21 @@ header .account .account-icon img {
   font-size: .9rem;
   line-height: 1.5rem;
 }
-.wrapper .block .waittime div::after {
-  content: "ミリ秒";
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: block;
-}
 .wrapper .block .waittime input {
   position: absolute;
-  left: 0;
-  opacity: 0;
-  width: 0;
-  pointer-events: none;
-}
-.wrapper .block .waittime .waittime-label {
-  display: block;
-  position: relative;
   border: none;
   padding: 0 .2rem;
   background: none;
   outline: none;
-  width: auto;
-  cursor: pointer;
-  border-radius: .5rem;
+  width: 8rem;
+  color: #777;
+  font-size: .9rem;
   white-space: nowrap;
   transition: .2s;
 }
-.wrapper .block .waittime .waittime-label:focus-within {
+.wrapper .block .waittime input:focus {
   color: #007aff;
-  background: rgba(0, 122, 255, 0.12);
-  outline: .1rem solid #007aff;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 8px;
-  transform: scale(1.1);
-  z-index: 20;
-}
-.wrapper .block .waittime .waittime-label::-webkit-outer-spin-button, .wrapper .block .waittime .waittime-label::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+  border-bottom: .1rem solid #007aff;
 }
 .wrapper .block:last-child .waittime {
   opacity: 0;
@@ -248,70 +213,70 @@ header .account .account-icon img {
 }
 .wrapper .block .content .select.focused {
   transform: scale(1.1);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 8px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0rem .15rem .6rem;
 }
 .wrapper .block .content .select .storage {
   display: none;
 }
 .wrapper .block.kind-track .icon {
-  background: #FFC400;
+  background: #ff9900;
 }
 .wrapper .block.kind-track .select {
-  color: #FFC400;
-  background: rgba(255, 196, 0, 0.12);
+  color: #ff9900;
+  background: rgba(255, 153, 0, 0.12);
 }
 .wrapper .block.kind-track .select.focused {
-  outline: .1rem solid #FFC400;
+  outline: .1rem solid #ff9900;
 }
 .wrapper .block.kind-time .icon {
-  background: #FF710E;
+  background: #f1c300;
 }
 .wrapper .block.kind-time .select {
-  color: #FF710E;
-  background: rgba(255, 113, 14, 0.12);
+  color: #f1c300;
+  background: rgba(241, 195, 0, 0.12);
 }
 .wrapper .block.kind-time .select.focused {
-  outline: .1rem solid #FF710E;
+  outline: .1rem solid #f1c300;
 }
 .wrapper .block.kind-type .icon {
-  background: #3AC17D;
+  background: #35a16b;
 }
 .wrapper .block.kind-type .select {
-  color: #3AC17D;
-  background: rgba(58, 193, 125, 0.12);
+  color: #35a16b;
+  background: rgba(53, 161, 107, 0.12);
 }
 .wrapper .block.kind-type .select.focused {
-  outline: .1rem solid #3AC17D;
+  outline: .1rem solid #35a16b;
 }
 .wrapper .block.kind-station .icon {
-  background: #F45656;
+  background: #66ccff;
 }
 .wrapper .block.kind-station .select {
-  color: #F45656;
-  background: rgba(244, 86, 86, 0.12);
+  color: #66ccff;
+  background: rgba(102, 204, 255, 0.12);
 }
 .wrapper .block.kind-station .select.focused {
-  outline: .1rem solid #F45656;
+  outline: .1rem solid #66ccff;
 }
 .wrapper .block.kind-form .icon {
-  background: #A923E5;
+  background: #FF99A0;
 }
 .wrapper .block.kind-form .select {
-  color: #A923E5;
-  background: rgba(169, 35, 229, 0.12);
+  color: #FF99A0;
+  background: rgba(255, 153, 160, 0.12);
 }
 .wrapper .block.kind-form .select.focused {
-  outline: .1rem solid #A923E5;
+  outline: .1rem solid #FF99A0;
 }
 .wrapper .block.kind-fixed .icon {
-  background: #3A7FF5;
+  background: #c7b1de;
 }
 .wrapper .block.kind-fixed .select {
-  color: #3A7FF5;
-  background: rgba(58, 127, 245, 0.12);
+  color: #c7b1de;
+  background: rgba(199, 178, 222, 0.12);
 }
 .wrapper .block.kind-fixed .select.focused {
-  outline: .1rem solid #3A7FF5;
+  outline: .1rem solid #c7b1de;
 }
 .wrapper .block .remove-btn {
   display: flex;
@@ -343,7 +308,7 @@ header .account .account-icon img {
   margin: 0 2rem;
   padding: .25rem 0;
   background: white;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 8px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0rem .15rem .6rem;
   overflow-x: visible;
   overflow-y: hidden;
 }
@@ -414,6 +379,12 @@ header .account .account-icon img {
 .wrapper .panel-container .panel.ctrl-btn .forward-btn, .wrapper .panel-container .panel.ctrl-btn .backward-btn {
   font-size: 2rem;
 }
+
+.wrapper .panel-container .downloadFile a {
+  display: block;
+  margin: 1rem;
+}
+
 .wrapper .panel-container .panel .panel-title {
   display: flex;
   align-items: center;
@@ -523,6 +494,7 @@ header .account .account-icon img {
 .wrapper .field .block-tree {
   display: flex;
   flex-direction: column;
+  user-select: none;
   align-items: center;
   width: calc(22rem + 2rem);
   height: calc(100% - 1rem);
@@ -539,12 +511,42 @@ header .account .account-icon img {
 .wrapper .field .block-tree.disabled .select {
   opacity: .6;
 }
+.wrapper .field .block-tree .nd-dragging {
+  display: none;/*
+  opacity: .5;
+}
+.wrapper .field .block-tree .nd-dragging * {
+  opacity: 0;*/
+}
+.wrapper .field .block-tree .tree-inner {
+  position: relative;
+}
+.wrapper .field .block-tree .tree-inner .prediction {
+  position: relative;
+  display: none;
+  align-items: center;
+  flex-shrink: 0;
+  width: 20rem;
+  height: 3.5rem;
+  margin-bottom: 2rem;
+  border-radius: .8rem;
+  background: white;
+  outline: solid .2rem #007aff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0rem .15rem .6rem;
+  opacity: .5;
+}
 .wrapper .field .block-tree .block {
   animation: .5s ease 0s 1 bounceIn forwards;
 }
+.wrapper .field .block-tree .block .content {
+  cursor: move;
+}
+.wrapper .field .block-tree .block .content .select {
+  cursor: pointer;
+}
 .wrapper .field .block-tree .block.playing {
   transform: scale(1.1);
-  outline: .2rem solid #007aff;
+  outline: .2rem solid rgba(0, 122, 255, .5);
 }
 @keyframes bounceIn {
   0% {
@@ -610,7 +612,7 @@ header .account .account-icon img {
   border-radius: .8rem;
   padding: .5rem 0;
   background: white;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 8px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0rem .15rem .6rem;
   transition: .2s;
 }
 .wrapper .field .menu-wrapper .menu-outer:before {
@@ -622,7 +624,7 @@ header .account .account-icon img {
   height: 1.5rem;
   transform: rotate(45deg);
   background: #fff;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 8px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0rem .15rem .6rem;
   z-index: -1;
 }
 .wrapper .field .menu-wrapper .menu-outer .search-outer {
@@ -652,22 +654,22 @@ header .account .account-icon img {
   overflow-y: scroll;
 }
 .wrapper .field .menu-wrapper .menu-outer .menu-content.kind-track .option:hover {
-  background: #FFC400;
+  background: #ff9900;
 }
 .wrapper .field .menu-wrapper .menu-outer .menu-content.kind-time .option:hover {
-  background: #FF710E;
+  background: #f1c300;
 }
 .wrapper .field .menu-wrapper .menu-outer .menu-content.kind-type .option:hover {
-  background: #3AC17D;
+  background: #35a16b;
 }
 .wrapper .field .menu-wrapper .menu-outer .menu-content.kind-station .option:hover {
-  background: #F45656;
+  background: #66ccff;
 }
 .wrapper .field .menu-wrapper .menu-outer .menu-content.kind-form .option:hover {
-  background: #A923E5;
+  background: #FF99A0;
 }
 .wrapper .field .menu-wrapper .menu-outer .menu-content.kind-fixed .option:hover {
-  background: #3A7FF5;
+  background: #c7b1de;
 }
 .wrapper .field .menu-wrapper .menu-outer .menu-content::-webkit-scrollbar {
   display: none;

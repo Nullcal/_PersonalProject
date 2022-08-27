@@ -191,7 +191,7 @@ $(function() {
               const curnIdx = queue[1][index][1].parents(".block").index(".block");
               // ブロックの境目の場合初期値を更新
               if (prevIdx !== curnIdx) {
-                wait = $(".block-tree").find(".block").eq(bIndex).find(".waittime-input").val();
+                wait = $(".block-tree").find(".block").eq(bIndex).find(".waittime-input").val().replace(/[^0-9]/g, '');
                 bIndex++;
               }
             }
